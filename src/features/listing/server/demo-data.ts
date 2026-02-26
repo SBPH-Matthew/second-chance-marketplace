@@ -1,0 +1,46 @@
+export const demoListings = [
+  {
+    id: 'demo-1',
+    title: 'Heritage Leather Weekender',
+    description: 'Genuine leather duffle in excellent condition.',
+    category: 'Fashion',
+    priceCents: 145000,
+    location: 'Makati City',
+    sellerId: 'demo-seller',
+    images: [{ id: 'img-1', url: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa', sortOrder: 0 }],
+    offers: [],
+    seller: {
+      id: 'demo-seller',
+      name: 'Mika Santos',
+      profile: {
+        username: 'mika_sells',
+        isVerifiedSeller: true,
+        responseRate: 98,
+        phone: '+639178359800',
+        emailPublic: 'mika.sells@example.com',
+      },
+    },
+  },
+  {
+    id: 'demo-2',
+    title: 'Vintage Brass Desk Lamp',
+    description: 'Warm brass finish with dimmer switch.',
+    category: 'Home',
+    priceCents: 39000,
+    location: 'Taguig',
+    sellerId: 'demo-seller',
+    images: [{ id: 'img-2', url: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c', sortOrder: 0 }],
+    offers: [],
+    seller: {
+      id: 'demo-seller',
+      name: 'Mika Santos',
+      profile: {
+        username: 'mika_sells',
+        isVerifiedSeller: true,
+        responseRate: 98,
+        phone: '+639178359800',
+        emailPublic: 'mika.sells@example.com',
+      },
+    },
+  },
+]

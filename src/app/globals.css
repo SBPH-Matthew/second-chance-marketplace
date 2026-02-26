@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 246 248 247;
+  --foreground: 17 33 28;
+  --muted: 233 236 234;
+  --primary: 236 72 153;
+  --success: 17 139 88;
+  --warning: 180 83 9;
+  --danger: 185 28 28;
+  --radius-base: 14px;
+  --motion-fast: 180ms;
+  --motion-base: 260ms;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
