@@ -1,4 +1,4 @@
-# DriftMarket
+# Second Chance
 
 Feature-based marketplace app with conversational buying, offer negotiation, contact privacy controls, and seller lead prioritization.
 
