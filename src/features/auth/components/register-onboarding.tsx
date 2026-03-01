@@ -118,7 +118,7 @@ export function RegisterOnboardingDialog({ open, onOpenChange }: RegisterOnboard
       email: loginEmail,
       password: loginPassword,
       redirect: false,
-      callbackUrl: '/marketplace',
+      callbackUrl: '/',
     })
 
     if (!result || result.error) {
@@ -128,7 +128,7 @@ export function RegisterOnboardingDialog({ open, onOpenChange }: RegisterOnboard
     }
 
     closeDialog()
-    router.push('/marketplace')
+    router.push('/')
     router.refresh()
   }
 
@@ -170,7 +170,7 @@ export function RegisterOnboardingDialog({ open, onOpenChange }: RegisterOnboard
     }
 
     closeDialog()
-    router.push('/marketplace')
+    router.push('/')
   }
 
   if (!open) return null
@@ -236,10 +236,10 @@ export function RegisterOnboardingDialog({ open, onOpenChange }: RegisterOnboard
           </div>
 
           <div className="space-y-2">
-            <Button variant="outline" className="w-full" onClick={() => signIn('google', { callbackUrl: '/marketplace' })}>
+            <Button variant="outline" className="w-full" onClick={() => signIn('google', { callbackUrl: '/' })}>
               Continue with Google
             </Button>
-            <Button variant="outline" className="w-full" onClick={() => signIn('facebook', { callbackUrl: '/marketplace' })}>
+            <Button variant="outline" className="w-full" onClick={() => signIn('facebook', { callbackUrl: '/' })}>
               Continue with Facebook
             </Button>
           </div>
@@ -249,8 +249,8 @@ export function RegisterOnboardingDialog({ open, onOpenChange }: RegisterOnboard
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/35 p-4 backdrop-blur-[2px]">
-      <div className="mx-auto mt-8 w-full max-w-5xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/35 p-4 backdrop-blur-[2px]">
+      <div className="w-full max-w-5xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl">
         <div className="grid min-h-[640px] md:grid-cols-[1fr,1.2fr]">
           <section className="flex flex-col p-8 md:p-10">
             <div className="mb-8">
@@ -387,43 +387,43 @@ export function RegisterOnboardingDialog({ open, onOpenChange }: RegisterOnboard
             {step === 2 && (
               <div className="flex h-full items-center">
                 <div className="mx-auto w-full max-w-md space-y-5">
-                <div className="space-y-3">
-                  <Button
-                    variant="outline"
-                    className="w-full bg-white"
-                    onClick={() => signIn('google', { callbackUrl: '/marketplace' })}
-                  >
-                    Continue with Google
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full bg-white"
-                    onClick={() => signIn('facebook', { callbackUrl: '/marketplace' })}
-                  >
-                    Continue with Facebook
-                  </Button>
-                </div>
+                  <div className="space-y-3">
+                    <Button
+                      variant="outline"
+                      className="w-full bg-white"
+                      onClick={() => signIn('google', { callbackUrl: '/' })}
+                    >
+                      Continue with Google
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full bg-white"
+                      onClick={() => signIn('facebook', { callbackUrl: '/' })}
+                    >
+                      Continue with Facebook
+                    </Button>
+                  </div>
 
-                <div className="flex items-center gap-3">
-                  <div className="h-px flex-1 bg-black/25" />
-                  <span className="text-xs font-medium uppercase tracking-wide text-black/60">
-                    Prefer email? Use personal email
-                  </span>
-                  <div className="h-px flex-1 bg-black/25" />
-                </div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-px flex-1 bg-black/25" />
+                    <span className="text-xs font-medium uppercase tracking-wide text-black/60">
+                      Prefer email? Use personal email
+                    </span>
+                    <div className="h-px flex-1 bg-black/25" />
+                  </div>
 
-                <div className="rounded-lg bg-white/70 p-4">
-                  <label className="mb-1 block text-sm font-medium text-black">Use personal email</label>
-                  <Input
-                    value={email}
-                    onChange={(event) => {
-                      setEmail(event.target.value)
-                      setAlreadyRegistered(false)
-                    }}
-                    placeholder="you@example.com"
-                    type="email"
-                  />
-                </div>
+                  <div className="rounded-lg bg-white/70 p-4">
+                    <label className="mb-1 block text-sm font-medium text-black">Use personal email</label>
+                    <Input
+                      value={email}
+                      onChange={(event) => {
+                        setEmail(event.target.value)
+                        setAlreadyRegistered(false)
+                      }}
+                      placeholder="you@example.com"
+                      type="email"
+                    />
+                  </div>
                 </div>
               </div>
             )}

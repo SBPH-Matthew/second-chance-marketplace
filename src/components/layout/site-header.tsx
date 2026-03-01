@@ -10,7 +10,7 @@ export async function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-gray-200 bg-white shadow-sm">
-      <div className="mx-auto w-full max-w-7xl px-4">
+      <div className="mx-auto w-full max-w-[1500px] px-4">
         <div className="flex h-12 items-center gap-3">
           <ShieldCheck className="h-4 w-4 text-gray-600" />
           <span className="text-xs text-gray-600">✔ Verified Sellers • 🛡 Buyer Protection</span>

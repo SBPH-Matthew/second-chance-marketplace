@@ -15,7 +15,7 @@ export function SearchFilters() {
     const next = new URLSearchParams(params.toString())
     if (!value || value === 'All') next.delete(key)
     else next.set(key, value)
-    router.push(`/marketplace?${next.toString()}`)
+    router.push(`/?${next.toString()}`)
   }
 
   return (
@@ -64,11 +64,10 @@ export function SearchFilters() {
           return (
             <button
               key={category}
-              className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full transition ${
-                active
+              className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full transition ${active
                   ? 'bg-black text-white shadow-sm'
                   : 'bg-gray-100 text-black hover:bg-gray-200'
-              }`}
+                }`}
               onClick={() => updateParam('category', category)}
             >
               {category}

@@ -23,7 +23,7 @@ export function ModerationActions({ targetType, targetId }: { targetType: 'USER'
 
   return (
     <div className="flex gap-2">
-      <Button size="sm" variant="outline" onClick={report} disabled={busy}>
+      <Button variant="outline" onClick={report} disabled={busy}>
         Report
       </Button>
     </div>
